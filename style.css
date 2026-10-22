@@ -1,0 +1,325 @@
+:root {
+  --bg: #07110f;
+  --panel: #101e1a;
+  --green: #b9ff39;
+  --muted: #93a69d;
+  --line: #294137;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, #17372a 0%, transparent 55%),
+    var(--bg);
+  color: #f4fff8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbar {
+  height: 72px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: #081410eF;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.logo span,
+.hero h1 span {
+  color: var(--green);
+}
+
+.status {
+  font-size: 11px;
+  color: var(--green);
+  letter-spacing: 2px;
+}
+
+main {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 22px 45px;
+}
+
+.hero {
+  text-align: center;
+  padding: 56px 10px 38px;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 76px);
+  font-weight: 1000;
+  letter-spacing: -3px;
+  margin: 12px 0;
+}
+
+.hero > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+button {
+  border: 0;
+  padding: 14px 23px;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 7px;
+  background: var(--green);
+  color: #12200d;
+  transition: transform .15s, filter .15s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+button.secondary,
+.small-button {
+  background: #1a3026;
+  color: white;
+  border: 1px solid #3b5948;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(100deg, #142b20, #0b1713, #281516);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 900;
+}
+
+.crest {
+  font-size: 28px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.score small {
+  font-size: 12px;
+  color: var(--green);
+  margin-left: 8px;
+  min-width: 42px;
+}
+
+.game-panel {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.game-heading,
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+}
+
+.game-heading h2 {
+  font-size: 15px;
+  margin: 0 0 5px;
+}
+
+.game-heading p,
+.game-footer {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.game-heading p {
+  margin: 0;
+}
+
+.small-button {
+  padding: 10px 13px;
+  font-size: 11px;
+}
+
+.canvas-wrap {
+  position: relative;
+  background: #1b6a37;
+  line-height: 0;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  touch-action: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #06130dc9;
+  line-height: normal;
+  text-align: center;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-card {
+  padding: 20px;
+}
+
+.big-ball {
+  font-size: 55px;
+}
+
+.overlay-card h2 {
+  letter-spacing: 2px;
+}
+
+.overlay-card p {
+  color: #b8c9be;
+  margin-bottom: 22px;
+}
+
+.game-footer {
+  flex-wrap: wrap;
+  border-top: 1px solid var(--line);
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.info-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.info-card h3 {
+  color: var(--green);
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+.info-card p {
+  color: #c3d2c8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+kbd {
+  background: #26392e;
+  padding: 4px 6px;
+  border-radius: 4px;
+  color: white;
+  font-size: 10px;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #64786c;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    padding: 0 18px;
+  }
+
+  main {
+    padding: 0 10px 25px;
+  }
+
+  .hero {
+    padding-top: 35px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .scoreboard {
+    padding: 14px 7px;
+    gap: 6px;
+  }
+
+  .team {
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .crest {
+    font-size: 17px;
+  }
+
+  .score {
+    gap: 6px;
+    font-size: 22px;
+  }
+
+  .score small {
+    font-size: 10px;
+    margin-left: 2px;
+    min-width: 35px;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-heading,
+  .game-footer {
+    padding: 12px;
+  }
+}

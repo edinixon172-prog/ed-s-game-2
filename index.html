@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Football Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">⚽ ULTIMATE <span>ARENA</span></div>
+    <div class="status">● LIVE MATCH</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR FOOTBALL JOURNEY STARTS HERE</p>
+      <h1>OWN THE <span>GAME.</span></h1>
+      <p>Ta kontroll, slå motstanderen og score fantastiske mål.</p>
+      <div class="mode-buttons">
+        <button id="startBtn">▶ START KAMP</button>
+        <button id="trainingBtn" class="secondary">TRENING</button>
+      </div>
+    </section>
+
+    <section class="scoreboard">
+      <div class="team"><span class="crest">🔵</span><span>BLUE FC</span></div>
+      <div class="score">
+        <strong id="homeScore">0</strong>
+        <span>:</span>
+        <strong id="awayScore">0</strong>
+        <small id="clock">00:00</small>
+      </div>
+      <div class="team"><span class="crest">🔴</span><span>RED UNITED</span></div>
+    </section>
+
+    <section class="game-panel">
+      <div class="game-heading">
+        <div>
+          <h2>ARENA PITCH</h2>
+          <p id="message">Trykk START KAMP for å spille.</p>
+        </div>
+        <button id="resetBtn" class="small-button">↻ NY KAMP</button>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="game" width="1000" height="600"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-card">
+            <div class="big-ball">⚽</div>
+            <h2>READY TO PLAY?</h2>
+            <p>Beveg deg, sikt og skyt!</p>
+            <button id="overlayStart">START SPILLET</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-footer">
+        <span>🔵 DU SPILLER SOM BLUE FC</span>
+        <span id="gameState">KAMPEN ER IKKE STARTET</span>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="info-card">
+        <h3>🎮 KONTROLLER</h3>
+        <p><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> Beveg spiller</p>
+        <p><kbd>SHIFT</kbd> Sprint</p>
+        <p><kbd>MUS</kbd> Sikt med musen</p>
+        <p><kbd>SPACE</kbd> Hold for kraft, slipp for skudd</p>
+        <p><kbd>E</kbd> Pasning</p>
+      </article>
+      <article class="info-card">
+        <h3>🏆 KAMPINFO</h3>
+        <p>Modus: <strong id="modeLabel">Vanlig kamp</strong></p>
+        <p>Banetype: <strong>Green Stadium</strong></p>
+        <p>Motstander: <strong>Red United</strong></p>
+        <p>Mål: <strong>Score flest mål!</strong></p>
+      </article>
+      <article class="info-card">
+        <h3>💡 TIPS</h3>
+        <p>Hold inne SPACE for å lade skuddet.</p>
+        <p>Pass på ballen og sikt mot motstanderens mål.</p>
+        <p>Bruk sprint for å komme deg forbi forsvarerne.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>ULTIMATE FOOTBALL ARENA · FAN-MADE BROWSER GAME</footer>
+  <script src="script.js"></script>
+</body>
+</html>
